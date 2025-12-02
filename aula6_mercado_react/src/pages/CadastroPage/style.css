@@ -1,0 +1,118 @@
+/* style.css */
+
+/* --- Estilo do Container Principal --- */
+
+.cadastro-container {
+    /* Centraliza o container na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    
+    /* Padding para não ficar grudado nas bordas */
+    padding: 40px 20px;
+    
+    /* Largura máxima para centralizar em telas grandes */
+    max-width: 600px;
+    margin: 40px auto;
+    
+    /* Efeito de card */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* --- Estilo do Formulário --- */
+
+.cadastro-container form {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.form-group {
+    /* Espaçamento entre grupos de campos */
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    transition: border-color 0.3s;
+}
+
+/* Feedback de foco */
+.form-group input:focus {
+    border-color: #007bff; /* Cor primária */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Estilo dos Erros de Validação --- */
+
+.error {
+    display: block;
+    color: #dc3545; /* Vermelho forte para erros */
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Espaço antes do próximo input */
+    font-weight: 500;
+}
+
+/* Marca o input com borda vermelha se houver erro */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group input.error-field { /* Usar uma classe auxiliar se o React Hook Form não atualizar o :invalid */
+    border-color: #dc3545;
+}
+
+/* --- Estilo do Botão de Envio --- */
+
+.cadastro-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Cor primária azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.cadastro-container button[type="submit"]:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Estilo para quando o botão estiver desabilitado (enviando) */
+.cadastro-container button[type="submit"]:disabled {
+    background-color: #a0c3e6;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Estilo da Toastify (Requer importação global ou componente) --- */
+/*
+Para garantir que o `toast` do react-toastify seja exibido corretamente,
+você precisará ter o CSS da própria biblioteca importado globalmente no seu projeto.
+Exemplo: import 'react-toastify/dist/ReactToastify.css';
+*/

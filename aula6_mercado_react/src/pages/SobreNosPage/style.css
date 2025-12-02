@@ -1,0 +1,9 @@
+.sobre {
+    display: grid;
+    gap: 12px;
+}
+
+.sobre ul {
+    margin: 0;
+    padding-left: 18px;
+}

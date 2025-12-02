@@ -1,0 +1,27 @@
+/* src\components\Footer\style.css */
+
+.footer {
+    margin-top: auto;
+    /* empurra o footer para o fundo da página */
+    background: #1c3619;
+    /* quase preto */
+    color: #e5e7eb;
+    /* cinza-200 */
+}
+
+.footer__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 20px 0 28px;
+    display: grid;
+    gap: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.copy {
+    opacity: .8;
+}
